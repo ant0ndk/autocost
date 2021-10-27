@@ -52,7 +52,6 @@ class Dialog():
             nalog = 7.5 * hp
         else:
             nalog = 15 * hp
-        lost_cash = price*0.05
         credit_sum = float(input('Сумма кредита: '))
         credit_date = float(input('Срок кредита(в годах): '))
         credit_pc = float(input('Процент по кредиту: '))
@@ -60,6 +59,7 @@ class Dialog():
             credit_year = float((credit_sum / credit_date) * (credit_pc / 100))
         else:
             credit_year = 0
+        lost_cash = (price-credit_sum)*0.05
         wash_cost = float(input('Стоимость 1 мойки автомобиля: '))
         wash_cost = wash_cost * 24
         odo = float(input('Пробег в год: '))
